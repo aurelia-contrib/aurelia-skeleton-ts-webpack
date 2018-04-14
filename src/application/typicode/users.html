@@ -1,0 +1,10 @@
+<template>
+  <h3 class="page-title">Users</h3>
+  <ul class="list-items">
+    <template repeat.for="user of users">
+      <li class="list-item">
+        ${user.id} - ${user.email}
+      </li>
+    </template>
+  </ul>
+</template>

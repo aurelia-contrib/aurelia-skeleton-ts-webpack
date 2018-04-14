@@ -1,0 +1,10 @@
+<template>
+  <h3 class="page-title">Comments</h3>
+  <ul class="list-items">
+    <template repeat.for="comment of comments">
+      <li class="list-item">
+        ${comment.id} - ${comment.body}
+      </li>
+    </template>
+  </ul>
+</template>

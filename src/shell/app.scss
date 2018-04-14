@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+html,
+body,
+[aurelia-app="main"] {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+  color: rgba(0, 0, 0, .87);
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+[aurelia-app="main"] {
+  display: grid;
+  grid-template-columns: [left] 15rem 2rem [main] 1fr;
+  grid-template-rows: [top] 5rem [main] 1fr;
+  grid-template-areas:
+  "navigation . main"
+  "navigation . main"
+}
+
+router-view {
+  display: block;
+}
+
+.app-left {
+  grid-area: navigation;
+}
+
+.app-main {
+  overflow-y: auto;
+  grid-area: main;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  text-transform: none;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: .25rem;
+}
+
+.list-items {
+  margin: 1rem 0 0 1.25rem;
+
+  .list-item {
+    position: relative;
+    display: list-item;
+    table-layout: fixed;
+    list-style-type: none;
+    list-style-position: outside;
+    padding: .2rem 0;
+
+    &:before {
+      position: absolute;
+      font-weight: 400;
+      user-select: none;
+      margin-left: -1.25rem;
+      content: '•';
+    }
+  }
+}

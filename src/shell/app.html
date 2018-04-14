@@ -1,0 +1,10 @@
+<template>
+  <require from="./reset.css"></require>
+  <require from="./app.scss"></require>
+  <require from="./components/navigation"></require>
+
+  <navigation class="app-left" router.bind="router"></navigation>
+  <router-view class="app-main"></router-view>
+  <au-element au-attribute show.bind="{} | auConverter:'arg1':'arg2' & auBehavior:'arg'">
+  </au-element>
+</template>

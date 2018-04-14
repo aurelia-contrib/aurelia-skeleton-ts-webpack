@@ -1,0 +1,10 @@
+<template>
+  <h3 class="page-title">Albums</h3>
+  <ul class="list-items">
+    <template repeat.for="album of albums">
+      <li class="list-item">
+        ${album.id} - ${album.title}
+      </li>
+    </template>
+  </ul>
+</template>

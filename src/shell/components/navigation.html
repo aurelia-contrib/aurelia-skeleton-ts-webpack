@@ -1,0 +1,11 @@
+<template class="nav-list">
+  <require from="./navigation.scss"></require>
+  <template repeat.for="navModel of router.navigation">
+    <a class="nav-link" href.bind="navModel.href">${navModel.title}</a>
+    <div if.bind="navModel.settings.childRouter" class="child-nav-list">
+      <template repeat.for="childNavModel of navModel.settings.childRouter.navigation">
+        <a class="nav-link" href.bind="childNavModel.href">${childNavModel.title}</a>
+      </template>
+    </div>
+  </template>
+</template>

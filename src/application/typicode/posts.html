@@ -1,0 +1,10 @@
+<template>
+  <h3 class="page-title">Posts</h3>
+  <ul class="list-items">
+    <template repeat.for="post of posts">
+      <li class="list-item">
+        ${post.id} - ${post.title}
+      </li>
+    </template>
+  </ul>
+</template>
